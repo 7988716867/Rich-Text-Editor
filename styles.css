@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .toolbar {
+    margin-bottom: 10px;
+  }
+  
+  .toolbar button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toolbar button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .toolbar input[type="color"] {
+    vertical-align: middle;
+  }
+  
+  #editor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-y: auto;
+  }
+  
+  #cursor-indicator {
+    position: absolute;
+    background-color: #007bff;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+  }
+  

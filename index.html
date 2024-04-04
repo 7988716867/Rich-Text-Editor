@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rich Text Editor</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="toolbar">
+  <button onclick="execCmd('bold')"><b>B</b></button>
+  <button onclick="execCmd('italic')"><i>I</i></button>
+  <button onclick="execCmd('underline')"><u>U</u></button>
+  <button onclick="execCmd('justifyLeft')">Left</button>
+  <button onclick="execCmd('justifyCenter')">Center</button>
+  <button onclick="execCmd('justifyRight')">Right</button>
+  <button onclick="execCmd('justifyFull')">Justify</button>
+  <button onclick="execCmd('insertOrderedList')">&#35;</button>
+  <button onclick="execCmd('insertUnorderedList')">•</button>
+  <button onclick="execCmd('indent')">&#8605;</button>
+  <button onclick="execCmd('outdent')">&#8604;</button>
+  <button onclick="highlightText()">Highlight</button>
+  <input type="color" onchange="setFontColor(this.value)">
+  <input type="number" min="1" max="7" onchange="setFontSize(this.value)">
+  <button onclick="undo()">Undo</button>
+  <button onclick="redo()">Redo</button>
+  <button onclick="saveDocument()">Save</button>
+  <button onclick="loadDocument()">Load</button>
+</div>
+<div id="editor" contenteditable="true">
+  Start typing...
+</div>
+<div id="cursor-indicator"></div>
+<script src="script.js"></script>
+</body>
+</html>
